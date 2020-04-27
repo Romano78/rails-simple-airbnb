@@ -4,7 +4,7 @@ Flat.destroy_all
 
 puts "creating Flats"
 
-4.times do 
+3.times do 
     flat = Flat.create!(
         name: Faker::Restaurant.name,
         address: Faker::Address.street_address,

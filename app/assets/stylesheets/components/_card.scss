@@ -1,0 +1,50 @@
+.card-product-infos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+
+
+.card-content {
+    width: 300px;
+    margin-top: 28px;
+  
+}
+
+
+.card-img> img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card-content h1 {
+    font-size: 30px;
+    margin-top: 7px;
+    font-family: initial;
+  }
+
+  .card-flat-info {
+    display: flex;
+  }
+
+  .card-guest {
+    padding-right: 20px;
+    font-size: 20px;
+  }
+
+  .card-price {
+    font-size: 20px;
+
+  }
+
+  .card-body {
+      background: #F8F9FA;
+  }
+
+  .card-footer {
+      background: white;
+      border-top: none;
+  }

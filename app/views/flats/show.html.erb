@@ -1,0 +1,52 @@
+<div 
+    class="map" 
+    style="background-image: 
+        url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200');">
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <div class="flat-show-card">
+                <div class="flat-show-card-content">
+                    <h1><%= @flat.name  %></h1>
+                    <p><%= @flat.address%></p>
+                </div>
+            </div>
+            <div class="flat-show-card" id="show-card-description">
+                <div class="flat-show-card-content">
+                    <h1><%= @flat.name  %></h1>
+                    <p><%= @flat.description%></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="flat-show-card">
+                <h1>Book This Place</h1>
+            </div>
+            <div class="flat-show-card">
+                <h1>Details</h1>
+                <div class="card-detail d-flex">
+                    <div class="card-guest">
+                        <i class="fas fa-user-friends"></i>
+                        <span><%=  @flat.number_of_guest %></span>
+                    </div>
+                    <div class="card-price">
+                        <i class="fas fa-euro-sign"></i>
+                        <span><%=  @flat.price_per_night %></span>
+                    </div>
+                </div>
+            </div>
+            <div class="flat-show-card" id="show-card-share">
+                <div class="card-share-title">
+                    <h6>Share</h6> 
+                </div>
+                <div class="card-share-links">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,63 +1,63 @@
 // Place all the styles related to the flats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$card-body: #eff6fc;
+
 
 body {
     background-color: white;
 }
 
-.navbar {
-    background: whitesmoke;
+.map {
+    height: 350px;
+    background-position: center;
+    background-size: cover;
 }
 
-.card-product-infos {
+
+.flat-show-card {
+    background-color: #F8F9FA;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    top: -78px;
+    left: 16px;
+    height: 123px;
+    margin-bottom: 16px;
+    padding: 10px;
+}
+
+.flat-show-card-content {
+    padding: 17px;
+}
+
+#show-card-description{
+    padding: 17px;
+    margin-top: 15px;
+    height: 400px;
+
+}
+
+.flat-show-card-content h1 {
+    padding-left: 15px;
+    font-family: inherit;
+}
+
+.flat-show-card-content p {
+    padding-left: 39px;
+    font-family: inherit;
+    font-size: 19px;
+}
+
+#show-card-share {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px;
-
+    height: 67px;
 }
 
-
-
-.card-content {
-    width: 300px;
-    margin-top: 28px;
-  
+.card-share-title {
+    margin-top: 15px;
 }
-
-
-.card-img> img {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-  }
-
-  .card-content h1 {
-    font-size: 30px;
-    margin-top: 7px;
-    font-family: initial;
-  }
-
-  .card-flat-info {
-    display: flex;
-  }
-
-  .card-guest {
-    padding-right: 20px;
-    font-size: 20px;
-  }
-
-  .card-price {
-    font-size: 20px;
-
-  }
-
-  .card-body {
-      background: #eff6fc;
-  }
-
-  .card-footer {
-      background: white;
-      border-top: none;
-  }
+.card-share-links {
+    margin-top: 15px;
+}
