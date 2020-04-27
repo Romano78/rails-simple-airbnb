@@ -25,6 +25,13 @@
               </div>
               <div class="card-footer">
                   <%= link_to "More info", flat_path(flat) %>
+                  <%= link_to "Edit", edit_flat_path(flat), class: "card-edit-link" %>
+                  <%= link_to "Delete",
+                    flat_path(flat),
+                    class: "card-delete-link",
+                    method: :delete,
+                    data: { confirm: "Are you sure you want to delete #{flat.name}?" }
+                  %>
               </div>
           </div>
       <% end %>
