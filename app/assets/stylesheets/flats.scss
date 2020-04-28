@@ -8,6 +8,10 @@ body {
     background-color: white;
 }
 
+.index-header {
+    margin: 19px;
+}
+
 .map {
     height: 350px;
     background-position: center;
@@ -25,11 +29,13 @@ body {
     height: 123px;
     margin-bottom: 16px;
     padding: 10px;
+    height: 200px;
 }
 
-.flat-show-card-content {
-    padding: 17px;
+#flat-show-detail {
+    height: 107px;
 }
+
 
 #show-card-description{
     padding: 17px;
@@ -70,3 +76,15 @@ body {
 .card-delete-link {
     color: red;
 }
+
+
+#flat-show-book {
+    height: 268px;
+    margin-bottom: 24px;
+}
+
+#flat-show-input {
+    display: block !important;
+    margin-bottom: 8px;
+}
+

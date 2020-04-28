@@ -1,41 +1,59 @@
 <div class="container">
+    <div class="index-header">
+
+        <% if @query %>
+
+        <h1 class="index-title"><strong>All of our Flats</strong></h1>
+        <p>you searched for <%= @query %>. We found <%= @flats.count%> out of <%= Flat.count  %> on our website</p>
+        <% else %>
+        <h1 class="index-title"><strong>All Flats</strong></h1>
+        <p>All <%=  @number_of_flats %> flats.</p>
+        <% end %>
+    </div>
+
+
   <div class="card-product-infos">
-      <% @flats.each do |flat| %>
-          <div class="card-content">
-              <div class="card-img">
-                  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" height="50px" width="50px" alt="">
-              </div>
-              <div class="card-body">
-                  <div class="card-content-title">
-                      <h1><%=  flat.name %></h1>
-                  </div>
-                  <div class="card-content-address">
-                      <p><%=  flat.address %></p>
-                  </div>
-                  <div class="card-flat-info">
-                      <div class="card-guest">
-                          <i class="fas fa-user-friends"></i>
-                          <span><%=  flat.number_of_guest %></span>
-                      </div>
-                      <div class="card-price">
-                          <i class="fas fa-euro-sign"></i>
-                          <span><%=  flat.price_per_night %></span>
-                      </div>
-                  </div>
-              </div>
-              <div class="card-footer">
-                  <%= link_to "More info", flat_path(flat) %>
-                  <%= link_to "Edit", edit_flat_path(flat), class: "card-edit-link" %>
-                  <%= link_to "Delete",
-                    flat_path(flat),
-                    class: "card-delete-link",
-                    method: :delete,
-                    data: { confirm: "Are you sure you want to delete #{flat.name}?" }
-                  %>
-              </div>
-          </div>
-      <% end %>
-  </div>
+    <% @flats.each do |flat| %>
+        <div class="card-content">
+            <div class="card-img">
+            <% if flat.photo_url.present? %>
+                 <%= image_tag flat.photo_url%>
+                <% else %>
+                   <img src="https://source.unsplash.com/collection/190727/1600x900" height="50px" width="50px" alt="">
+            <% end %>
+
+            </div>
+            <div class="card-body">
+                <div class="card-content-title">
+                    <h1><%=  flat.name %></h1>
+                </div>
+                <div class="card-content-address">
+                    <p><%=  flat.address %></p>
+                </div>
+                <div class="card-flat-info">
+                    <div class="card-guest">
+                        <i class="fas fa-user-friends"></i>
+                        <span><%=  flat.number_of_guest %></span>
+                    </div>
+                    <div class="card-price">
+                        <i class="fas fa-euro-sign"></i>
+                        <span><%=  flat.price_per_night %></span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <%= link_to "More info", flat_path(flat) %>
+                <%= link_to "Edit", edit_flat_path(flat), class: "card-edit-link" %>
+                <%= link_to "Delete",
+                flat_path(flat),
+                class: "card-delete-link",
+                method: :delete,
+                data: { confirm: "Are you sure you want to delete #{flat.name}?" }
+                %>
+            </div>
+        </div>
+    <% end %>
+    </div>
 </div>
 
 

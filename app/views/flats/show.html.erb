@@ -1,8 +1,12 @@
-<div 
-    class="map" 
-    style="background-image: 
-        url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200');">
-</div>
+<% if @flat.photo_url.present? %>
+    <div class="map" style="background-image: 
+        url(' <%= @flat.photo_url  %>')">
+    </div>
+    <% else %>
+ <div class="map" style="background-image: 
+        url(' https://source.unsplash.com/collection/190727/1600x900')">
+    </div>
+<% end %>
 
 <div class="container">
     <div class="row">
@@ -21,10 +25,21 @@
             </div>
         </div>
         <div class="col-4">
-            <div class="flat-show-card">
+            <div class="flat-show-card" id="flat-show-book">
                 <h1>Book This Place</h1>
-            </div>
-            <div class="flat-show-card">
+                <form action="">
+                    <div class="input-group" id="flat-show-input">
+                        <span class="input-group-addon" id="basic-addon1">From:</span>
+                        <input type="text" class="form-control" placeholder="12/10/2017" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mt-2" id="flat-show-input" >
+                        <span class="input-group-addon" id="basic-addon1">To:</span>
+                         <input type="text" class="form-control" placeholder="18/10/2017" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <input type="submit" value="Book" class="btn btn-success mt-2" style="width: 100%">
+                </form>           
+             </div>
+            <div class="flat-show-card" id="flat-show-detail">
                 <h1>Details</h1>
                 <div class="card-detail d-flex">
                     <div class="card-guest">
